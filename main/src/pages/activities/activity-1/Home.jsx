@@ -2,7 +2,7 @@ import "./Home.css";
 
 const Home = () => {
     return (
-        <main class="container">
+        <main className="container">
             <h1>React App</h1>
             <p>This is a simple landing page, where you can see the some of the information and features of our website.</p>
             <section>
