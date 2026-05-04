@@ -1,7 +1,5 @@
-import React, {useState, useEffect, use} from "react";
+import React, {useState, useEffect} from "react";
 import "./Activity2.css";
-import { Link } from "react-router-dom";
-
 
 const Activity2 = () => {
     const [username, setUsername] = useState("");
@@ -39,19 +37,23 @@ const Activity2 = () => {
     };
 
     return (
-    <div>
+    <main>
         <h2>Login Page</h2>
 
+        <section>
         {isLoggedIn ? (
 
-            <div>
+
+            <article>
                 <h3>You are logged in</h3>
                 <p>{message}</p>
-                <button onClick={handleLogout}>Logout</button>
-            </div>
+                <button onClick={handleLogout}>
+                    Logout
+                </button>
+            </article>
         )   :   (
             
-            <div>
+            <article>
                 <input
                     type="text"
                     placeholder="Username"
@@ -68,11 +70,14 @@ const Activity2 = () => {
                 />
                 <br /><br />
 
-                <button onClick={handleLogin}>Login</button>
+                <button onClick={handleLogin}>
+                    Login
+                </button>
                 <p>{message}</p>
-            </div>
-        )}
-    </div>
+            </article>
+            )}
+        </section>
+    </main>
     );
 }
 
