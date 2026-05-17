@@ -1,0 +1,126 @@
+.student-card {
+  background: #fff;
+  border: 1.5px solid #e8e4de;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.student-card:hover {
+  border-color: #b8a898;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transform: translateY(-2px);
+}
+
+.student-card--expanded {
+  border-color: #7a6a55;
+  box-shadow: 0 6px 28px rgba(80, 60, 30, 0.12);
+}
+
+/* Header row */
+.student-card__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.student-card__meta {
+  flex: 1;
+}
+
+.student-card__name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e1710;
+  margin: 0 0 0.15rem;
+}
+
+.student-card__course {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #8a7a66;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+.student-card__badges {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.student-card__toggle {
+  margin-left: auto;
+}
+
+.toggle-icon {
+  font-size: 1.1rem;
+  color: #a89880;
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.toggle-icon--open {
+  transform: rotate(180deg);
+}
+
+/* Expanded body */
+.student-card__body {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #eee8e0;
+  animation: slide-in 0.25s ease;
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.student-card__fullname {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #a89880;
+  text-transform: uppercase;
+  margin: 0 0 0.6rem;
+}
+
+.student-card__bio {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a3d2c;
+  margin: 0 0 1rem;
+  font-style: italic;
+}
+
+.student-card__subjects-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8a7a66;
+  margin: 0 0 0.5rem;
+}
+
+.student-card__subject-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.student-card__subject-item {
+  background: #f5f0ea;
+  color: #5a4a35;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+}

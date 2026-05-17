@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Grotes, Saint Mark D.",
+    "nickname": "Mark",
+    "year": 3,
+    "course": "BS Computer Science",
+    "gwa": 1.5,
+    "status": "Dean's Lister",
+    "avatar": "SM",
+    "subjects": ["Data Structures", "Algorithms", "Web Development"],
+    "bio": "Passionate about full-stack development and open-source contributions."
+  },
+  {
+    "id": 2,
+    "name": "Mediante, Arvin Clark G.",
+    "nickname": "Arvin",
+    "year": 3,
+    "course": "BS Computer Science",
+    "gwa": 1.75,
+    "status": "Regular",
+    "avatar": "AC",
+    "subjects": ["Mobile Development", "UI/UX Design", "Database Systems"],
+    "bio": "Mobile-first developer with a keen eye for user experience design."
+  },
+  {
+    "id": 3,
+    "name": "Ostulano, Janna M.",
+    "nickname": "Janna",
+    "year": 3,
+    "course": "BS Computer Science",
+    "gwa": 1.25,
+    "status": "Dean's Lister",
+    "avatar": "JO",
+    "subjects": ["Machine Learning", "Statistics", "Data Visualization"],
+    "bio": "Aspiring data scientist exploring the intersection of AI and healthcare."
+  },
+  {
+    "id": 4,
+    "name": "Versaga, Jullever D.",
+    "nickname": "Jullever",
+    "year": 3,
+    "course": "BS Computer Science",
+    "gwa": 1.6,
+    "status": "Dean's Lister",
+    "avatar": "JV",
+    "subjects": ["Systems Programming", "Networks", "Cybersecurity"],
+    "bio": "Systems enthusiast who loves tinkering with low-level code and security research."
+  },
+  {
+    "id": 5,
+    "name": "Dela Cruz, Maria Santos",
+    "nickname": "Maria",
+    "year": 2,
+    "course": "BS Information Technology",
+    "gwa": 1.9,
+    "status": "Regular",
+    "avatar": "MD",
+    "subjects": ["Web Design", "Networking Fundamentals", "Technical Writing"],
+    "bio": "Creative developer who bridges the gap between design and technology."
+  },
+  {
+    "id": 6,
+    "name": "Reyes, Carlos Miguel P.",
+    "nickname": "Carlos",
+    "year": 4,
+    "course": "BS Computer Science",
+    "gwa": 1.1,
+    "status": "Dean's Lister",
+    "avatar": "CR",
+    "subjects": ["Thesis", "Software Engineering", "Cloud Computing"],
+    "bio": "Senior student finalizing research on distributed systems and microservices."
+  }
+]

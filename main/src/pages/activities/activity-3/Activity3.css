@@ -1,130 +1,265 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Space+Mono:wght@400;700&family=EB+Garamond:ital,wght@0,400;1,400&display=swap');
 
-.a3-page {
+/* ── Page shell ── */
+.a4-page {
   min-height: 100vh;
+  background: #faf8f5;
+  font-family: 'Space Mono', monospace;
+  padding: 3rem 1.5rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 3rem 1.5rem;
-  background: #faf8f5;
-  font-family: 'EB Garamond', Georgia, serif;
 }
 
-.a3-eyebrow {
-  font-family: 'Cinzel', serif;
+/* ── Header ── */
+.a4-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  max-width: 620px;
+}
+
+.a4-eyebrow {
   font-size: 10px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #a89880;
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.5rem;
 }
 
-.a3-date {
-  font-family: 'Cinzel', serif;
+.a4-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #1e1710;
+  margin: 0 0 0.5rem;
+  line-height: 1.1;
+}
+
+.a4-subtitle {
   font-size: 11px;
-  letter-spacing: 0.1em;
-  color: #c4b49e;
-  margin: 0 0 2.5rem;
-}
-
-.a3-card {
-  max-width: 560px;
-  width: 100%;
-  background: #ffffff;
-  border: 1px solid #ede8e0;
-  border-radius: 16px;
-  padding: 3rem 2.5rem;
-  text-align: center;
-  box-shadow: 0 2px 24px rgba(120, 100, 70, 0.07);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.a3-fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.a3-fade-out {
-  opacity: 0;
-  transform: translateY(8px);
-}
-
-.a3-verse-text {
-  font-size: 1.5rem;
-  line-height: 1.8;
-  color: #2c2417;
-  font-style: italic;
-  margin: 0 0 1.75rem;
-}
-
-.a3-divider {
-  width: 36px;
-  height: 1px;
-  background: #ddd5c8;
-  margin: 0 auto 1.25rem;
-}
-
-.a3-reference {
-  font-family: 'Cinzel', serif;
-  font-size: 13px;
-  letter-spacing: 0.1em;
-  color: #8a7560;
+  color: #8a7a66;
   margin: 0;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
 }
 
-.a3-skeleton-wrap {
+.a4-subtitle code {
+  background: #ede8e0;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 10px;
+}
+
+/* ── Stats bar ── */
+.a4-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: #fff;
+  border: 1px solid #e8e4de;
+  border-radius: 14px;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  width: 100%;
+  max-width: 680px;
+  justify-content: center;
+}
+
+.a4-stat {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
+  gap: 0.2rem;
 }
 
-.a3-skeleton {
-  background: #f0ece6;
-  border-radius: 4px;
-  height: 1.3em;
-  margin: 0.5em auto;
-  animation: a3-shimmer 1.3s infinite ease-in-out;
+.a4-stat__number {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e1710;
+  line-height: 1;
 }
 
-@keyframes a3-shimmer {
-  0%, 100% { opacity: 0.45; }
+.a4-stat__label {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a89880;
+}
+
+.a4-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: #e8e4de;
+}
+
+/* ── Controls ── */
+.a4-controls {
+  width: 100%;
+  max-width: 680px;
+  margin-bottom: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.a4-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.a4-filter-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border: 1.5px solid #ddd5c8;
+  border-radius: 999px;
+  background: transparent;
+  color: #8a7a66;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.a4-filter-btn:hover {
+  border-color: #a89880;
+  color: #4a3d2c;
+}
+
+.a4-filter-btn--active {
+  background: #4a3d2c;
+  border-color: #4a3d2c;
+  color: #faf8f5;
+}
+
+/* ── Card grid ── */
+.a4-content {
+  width: 100%;
+  max-width: 680px;
+}
+
+.a4-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ── Skeleton loader ── */
+.a4-skeleton-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.a4-skeleton-card {
+  background: #fff;
+  border: 1.5px solid #e8e4de;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.a4-skeleton {
+  background: #ede8e0;
+  border-radius: 6px;
+  height: 1em;
+  animation: a4-shimmer 1.3s infinite ease-in-out;
+}
+
+.a4-skeleton--circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.a4-skeleton-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@keyframes a4-shimmer {
+  0%, 100% { opacity: 0.4; }
   50%       { opacity: 1; }
 }
 
-.a3-error {
-  color: #b05a3a;
-  font-size: 1rem;
-  line-height: 1.7;
+/* ── Error state ── */
+.a4-error {
+  background: #fff5f5;
+  border: 1.5px solid #f5d0d0;
+  border-radius: 14px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.a4-error__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #a83232;
+  margin: 0 0 0.5rem;
+}
+
+.a4-error__msg {
+  font-size: 11px;
+  color: #c05a5a;
+  margin: 0 0 0.5rem;
+}
+
+.a4-error__hint {
+  font-size: 11px;
+  color: #8a5a5a;
   margin: 0;
 }
 
-.a3-btn {
-  margin-top: 2.5rem;
-  font-family: 'Cinzel', serif;
-  font-size: 11px;
-  letter-spacing: 0.15em;
+.a4-error__hint code {
+  background: #f5e0e0;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+/* ── Empty state ── */
+.a4-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #a89880;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.a4-clear-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 11px 28px;
-  border: 1px solid #cfc4b4;
-  border-radius: 8px;
+  padding: 8px 20px;
+  border: 1.5px solid #cfc4b4;
+  border-radius: 999px;
   background: transparent;
-  color: #8a7560;
+  color: #8a7a66;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s, transform 0.1s;
+  transition: all 0.15s ease;
 }
 
-.a3-btn:hover:not(:disabled) {
+.a4-clear-btn:hover {
   background: #f5f0ea;
-  color: #4a3b28;
+  color: #4a3d2c;
 }
 
-.a3-btn:active:not(:disabled) {
-  transform: scale(0.97);
-}
-
-.a3-btn:disabled {
-  opacity: 0.35;
-  cursor: not-allowed;
+/* ── Footer ── */
+.a4-footer {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
 }
