@@ -70,10 +70,6 @@ const Activity3 = () => {
       <header className="a4-header">
         <p className="a4-eyebrow">Activity 4 · React Hooks &amp; JSON</p>
         <h1 className="a4-title">Student Directory</h1>
-        <p className="a4-subtitle">
-          Data loaded from <code>/public/students.json</code> using{" "}
-          <code>useEffect</code> &amp; <code>useState</code>
-        </p>
       </header>
 
       {/* Stats bar (only when data is loaded) */}
@@ -170,15 +166,6 @@ const Activity3 = () => {
           </div>
         )}
       </section>
-
-      {/* Footer note */}
-      <footer className="a4-footer">
-        <Badge label="useState" variant="accent" />
-        <Badge label="useEffect" variant="accent" />
-        <Badge label="Props" variant="neutral" />
-        <Badge label="JSON Fetch" variant="success" />
-        <Badge label="Reusable Components" variant="success" />
-      </footer>
     </main>
   );
 };

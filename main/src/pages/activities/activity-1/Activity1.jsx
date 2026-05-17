@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import "./Home.css";
+import "./Activity1.css";
 
-const Home = () => {
+const Activity1 = () => {
     return (
         <main className="container">
             <h1>React App</h1>
@@ -20,4 +20,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Activity1;

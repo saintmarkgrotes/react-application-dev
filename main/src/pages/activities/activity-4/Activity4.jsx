@@ -23,7 +23,7 @@ const getDateString = () => {
   });
 }
 
-const Activity3 = () => {
+const Activity4= () => {
   const [verse, setVerse] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
